@@ -35,6 +35,7 @@ body {
   width:100%;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 @layer components{
@@ -126,5 +127,163 @@ body {
    bg-blue-700 text-zinc-50 text-[9pt] text-center tracking-wider cursor-pointer;
 }
 
+.miniCircle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+position: absolute;
+bottom: 0;
+transform: translateY(0px) scale(0);
+opacity: 0.5;
+transition: all 400ms;
+animation: aniCircle 3s ease-in-out;
+}
+
+@keyframes aniCircle {
+
+  0%{
+    transform: translateY(0px) scale(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-500px) scale(1);
+    opacity: 0;
+  }
+  
+}
+
+.divReelsBlock{
+  @apply w-[330px] h-[600px] bg-zinc-900 rounded-2xl relative overflow-hidden;
+}
+
+.divReel{
+  @apply w-full h-full bg-zinc-100 relative;
+}
+
+.divContent{
+  @apply w-full h-full text-zinc-800 overflow-hidden;
+}
+
+.divContent img{
+  @apply w-full h-full object-cover;
+}
+
+.divUserBlock{
+  @apply w-full h-auto px-4 py-2 bg-linear-0 from-zinc-800 to-zinc-50/0 flex flex-col justify-start items-center gap-2 absolute left-0 bottom-[50px];
+}
+
+.divUser{
+  @apply w-full flex justify-start items-center gap-3;
+}
+
+.divReelsControl{
+  @apply w-full h-[50px] flex justify-between 
+  items-center absolute bottom-0 left-0 bg-zinc-800 px-4 py-2 overflow-hidden;
+}
+
+.divReelsControl .iCons{
+  @apply text-[18pt] cursor-pointer;
+}
+
+.userPic{
+  @apply w-[40px] h-[40px] rounded-full overflow-hidden;
+}
+
+.userPic img{
+  @apply object-cover w-full h-full;
+}
+
+.userName{
+  @apply text-[9pt];
+}
+.btnFollow{
+  @apply w-auto h-auto px-1.5 py-0.5
+   text-center border-[1px] border-zinc-100 rounded-[6px] text-[8pt] cursor-pointer tracking-wide;
+}
+
+.divTune{
+  @apply text-[8pt] tracking-wide px-2 overflow-hidden;
+}
+
+.divTune span{
+  display: block;
+  font-size: 8pt;
+  transform: translateX(300px);
+  animation: spTuneMotion 10s linear infinite;
+}
+
+
+@keyframes spTuneMotion {
+  0%{
+    transform: translateX(300px);
+    
+  }
+  100%{
+    transform: translateX(-300px);
+  }
+}
+
+.divSocialBlock{
+  @apply absolute w-[60px] h-[240px] bg-amber-50/0 right-0 bottom-[75px] 
+  flex flex-col justify-evenly items-center gap-2 py-2;
+}
+
+.divLike{
+  @apply flex flex-col justify-center items-center;
+}
+
+.socialIcon{
+@apply text-[20pt] cursor-pointer;
+}
+
+.likeCount,.commentCount,.shareCount {
+  @apply text-[9pt] tracking-wide;
+}
+
+.divComment{
+  @apply flex flex-col justify-center items-center;
+}
+
+.divShare{
+  @apply flex flex-col justify-center items-center;
+}
+
+.motionBlock{
+  @apply w-[550px] h-auto py-1 px-2 overflow-hidden;
+}
+
+.motionBlock span{
+  display: block;
+  font-size: 9pt;
+  transform: translateX(400px);
+  animation: spanMotion 10s linear infinite;
+}
+
+
+
+@keyframes spanMotion {
+  
+  0%{
+    transform: translateX(400px);
+  }
+  100%{
+    transform: translateX(-400px);
+
+  }
 
 }
+
+.btnRandom{
+  @apply w-auto h-auto px-2 py-2.5 
+  text-center text-[10pt] 
+  border-[1px] border-zinc-600 rounded-lg cursor-pointer text-zinc-300 tracking-wider;
+}
+
+.divRandomStr{
+  @apply absolute top-[30%] left-[50%] text-[10pt] text-zinc-300 font-extralight tracking-wider;
+}
+
+}
+
+
+
