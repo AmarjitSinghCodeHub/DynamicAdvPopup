@@ -283,6 +283,44 @@ animation: aniCircle 3s ease-in-out;
   @apply absolute top-[30%] left-[50%] text-[10pt] text-zinc-300 font-extralight tracking-wider;
 }
 
+.feedbackContainer{
+  @apply w-[360px] h-auto border-[1px] border-zinc-800 rounded-2xl px-3 py-4 text-[9pt] text-zinc-300;
+}
+
+.userFeedback{
+  @apply w-full h-auto px-4 py-1.5 relative flex flex-col
+   justify-between items-start  transition-all delay-50 cursor-pointer;
+}
+
+.userFeedback:hover{
+  @apply bg-linear-90 from-zinc-900/5 to-zinc-900 transition-all delay-100;
+}
+
+
+
+.userFeedback::before{
+ @apply content-[''] absolute left-[-5px] top-[10px] size-[10px] rounded-full bg-zinc-700; 
+}
+
+.userFeedback::after{
+  @apply content-[''] absolute left-0 top-[20px] w-[1px] h-[90%] bg-zinc-700;
+
+}
+
+.userFeedback h1{
+  @apply text-[10pt] text-zinc-600 mb-2 font-semibold;
+}
+
+
+.feedbackPost{
+  @apply text-[9pt] text-zinc-300 mb-1 tracking-wider;
+}
+
+.feedbackpostdate{
+  @apply text-[8pt] italic text-zinc-700 tracking-wider;
+}
+
+
 }
 
 
